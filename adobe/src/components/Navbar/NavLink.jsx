@@ -14,6 +14,7 @@ import {
     Stack,
     useColorMode,
     Center,
+    Image,
   } from '@chakra-ui/react';
   import { MoonIcon, SunIcon } from '@chakra-ui/icons';
   import { IoMdAnalytics } from 'react-icons/io';
@@ -39,13 +40,16 @@ import {
       <>
         <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} position={'fixed'} zIndex={4} w={'100%'} top={0}>
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-            <Box fontFamily={'cursive'} fontSize={'24px'} color={'red'}>Adobe Media</Box>
+            <Box w={'130px'}><Image src="https://www.pngmart.com/files/22/Adobe-Systems-Logo-Transparent-PNG.png" /></Box>
   
             <Flex alignItems={'center'}>
               <Stack direction={'row'} spacing={7}>
   
               <Button>
                   {<IoMdAnalytics size={30}/>}
+                </Button>
+                <Button onClick={toggleColorMode}>
+                  {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                 </Button>
   
                 <Menu>
@@ -57,7 +61,7 @@ import {
                     minW={0}>
                     <Avatar
                       size={'sm'}
-                      src={'https://avatars.dicebear.com/api/male/username.svg'}
+                      src={'https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-hipster-vector-stock-91462914.jpg'}
                     />
                   </MenuButton>
                   <MenuList alignItems={'center'}>
@@ -65,7 +69,7 @@ import {
                     <Center>
                       <Avatar
                         size={'md'}
-                        src={'https://avatars.dicebear.com/api/male/username.svg'}
+                        src={'https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png'}
                       />
                     </Center>
                     <br />
@@ -80,9 +84,7 @@ import {
                   </MenuList>
                 </Menu>
   
-                <Button onClick={toggleColorMode}>
-                  {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                </Button>
+          
               </Stack>
             </Flex>
           </Flex>
