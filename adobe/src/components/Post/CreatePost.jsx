@@ -33,7 +33,6 @@ const CreatePost = ({allPosts}) => {
                 }
               })
                 .then((res) => {
-                    // console.log(res.data);
                     allPosts()
                     toast({
                       title: 'Published',
@@ -57,7 +56,7 @@ const CreatePost = ({allPosts}) => {
     }
   return (
     <>
-        <Text fontFamily={'cursive'} fontSize={'2xl'}>Create Post</Text>
+        <Text fontFamily={'fantasy'} fontSize={'5xl'}>Create Post</Text>
         <Textarea 
             name='content'
             value={content}

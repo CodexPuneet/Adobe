@@ -36,7 +36,7 @@ const EditProfile = () => {
         .then((res) => {
             localStorage.setItem("adobeMedia", JSON.stringify(res.data));
             toast({
-              title: 'Profile Edid Successfully.',
+              title: 'Profile Edit Successfully.',
               status: 'success',
               duration: 3000,
               isClosable: true,
@@ -45,7 +45,7 @@ const EditProfile = () => {
         })
         .catch((e) => {
             toast({
-              title: 'Something went worng try again.',
+              title: 'Something went wrong.',
               status: 'warning',
               duration: 3000,
               isClosable: true,

@@ -32,7 +32,7 @@ function UserProfile() {
                 ref={btnRef}
                 onClick={onOpen}
                 size={'sm'}
-                src={'https://avatars.dicebear.com/api/male/username.svg'}
+                src={'https://www.pngarts.com/files/11/Avatar-Transparent-Background-PNG.png'}
             />
         </Button>
       <Drawer
@@ -45,7 +45,7 @@ function UserProfile() {
         <DrawerOverlay />
         <DrawerContent height="70%  !important">
           <DrawerCloseButton />
-          <DrawerHeader fontFamily={'cursive'} fontSize={'2xl'} color={'red'}>Adobe Media</DrawerHeader>
+          <DrawerHeader fontFamily={''} fontSize={'4xl'} color={'#429795'}>Adobebook</DrawerHeader>
 
           <DrawerBody>
               <Tabs size='md' variant='enclosed'>

@@ -42,7 +42,7 @@ import axios from "axios";
             pt={2}>
             <Avatar
                 size={'md'}
-                src={'https://avatars.dicebear.com/api/male/username.svg'}
+                src={'https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png'}
             />  
             <Heading fontSize={'2xl'} fontFamily={'body'}>
               {getprofile.name}

@@ -27,19 +27,13 @@ import { Button,
             finalFocusRef={btnRef}
           >
             <DrawerOverlay />
-            <DrawerContent height="70%  !important">
+            <DrawerContent height="54%  !important">
               <DrawerCloseButton />
-              <DrawerHeader>Create your account</DrawerHeader>
+              <DrawerHeader onClick={onClose}>Create your account</DrawerHeader>
     
               <DrawerBody>
                 <UserForm />
               </DrawerBody>
-    
-              <DrawerFooter>
-                <Button variant='outline' mr={3} onClick={onClose}>
-                  Cancel
-                </Button>
-              </DrawerFooter>
             </DrawerContent>
           </Drawer>
         </>

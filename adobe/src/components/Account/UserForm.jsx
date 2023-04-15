@@ -35,7 +35,6 @@ const UserForm = () => {
         data: form
       })
         .then((res) => {
-            // console.log(res.data);
             localStorage.setItem("adobeMedia", JSON.stringify(res.data));
             toast({
               title: 'Login Success.',

@@ -11,16 +11,17 @@ const DeleteAccount = () => {
 
     const handleDelete = (e)=>{
         e.preventDefault();
-        toggleHaveUser();
         axios.delete(`https://adobe-4gmw.onrender.com/users/${profile._id}`)
-        .then((res)=>
-            toast({
-            title: 'Account Delete Success.',
+        .then((res)=>{
+          toast({
+            title: 'Account Deleted',
             status: 'success',
             duration: 3000,
             isClosable: true,
             position: "top",
-        }))
+        })
+        toggleHaveUser();
+        } )
         .catch((e) => {
             toast({
               title: 'Account Already Deleted.',
@@ -30,6 +31,7 @@ const DeleteAccount = () => {
               position: "top",
             })
         });
+       
     }
   return (
     <Box>

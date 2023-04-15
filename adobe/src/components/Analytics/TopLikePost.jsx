@@ -11,15 +11,20 @@ const TopLikePost = () => {
             .catch((e)=>console.log(e))
     },[])
 
-    console.log(topLikedPosts)
   return (
     <Box>
-        <Text 
-            mt={10}
-            fontFamily={'cursive'}
-            fontSize={'2xl'}
-            fontWeight={'bold'}
-        >Top 5 Posts</Text>
+        
+        <Text fontFamily={'cursive'} fontSize={'2xl'} fontWeight={'bold'} color={'red'}>Top Posts :</Text>
+        {
+          topLikedPosts.map((el,i)=>{
+            if(i==5)
+            {
+              return ;
+            }
+            return <Box> <Text>S.NO {i+1}:-{' '}{el.content}</Text>
+                  </Box>
+          })
+        }
 
         
     </Box>

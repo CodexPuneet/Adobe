@@ -20,7 +20,7 @@ const GetAllPosts = ({posts, allPosts}) => {
 
   const handleDisLikes = async(id)=>{
         await axios({
-        url: `https://adobe-4gmw.onrender.com/${id}/unlike`,
+        url: `https://adobe-4gmw.onrender.com/posts/${id}/unlike`,
             method: "POST",
             headers: {
                 Accept: "application/json",

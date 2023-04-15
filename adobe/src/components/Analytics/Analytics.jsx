@@ -2,6 +2,7 @@ import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFoo
 import React from "react";
 import { IoMdAnalytics } from "react-icons/io";
 import Count from "./Count";
+import TopLikePost from "./TopLikePost";
 // import TopLikePost from "./TopLikePost";
 
 function Analytics() {
@@ -28,7 +29,7 @@ function Analytics() {
   
             <DrawerBody>
                 <Count />
-                {/* <TopLikePost /> */}
+                <TopLikePost />
             </DrawerBody>
   
             <DrawerFooter>

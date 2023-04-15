@@ -2,7 +2,7 @@ import { Text, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, Mo
 import axios from "axios";
 import { useState } from "react";
 
-function ChangeContent({post_id, allPosts}) {
+function Update({post_id, allPosts}) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [content, setContent] = useState("");
     const toast = useToast();
@@ -55,7 +55,7 @@ function ChangeContent({post_id, allPosts}) {
   
     return (
       <>
-        <Text onClick={onOpen} fontFamily={'cursive'} fontWeight={'bold'} cursor={'pointer'} fontSize={'20px'} color={'blue'}>Change Content</Text>
+        <Text onClick={onOpen}  fontWeight={'bold'} cursor={'pointer'} fontSize={'20px'} color={'#429795'}>Update Post</Text>
 
   
         <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
@@ -95,4 +95,4 @@ function ChangeContent({post_id, allPosts}) {
     )
   }
 
-  export default ChangeContent;
+  export default Update;

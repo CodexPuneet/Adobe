@@ -3,9 +3,9 @@
 import React from 'react'
 import { Box, Text } from '@chakra-ui/react'
 import { FcLike } from 'react-icons/fc';
-import { FcDislike } from 'react-icons/fc';
 import { AiFillDelete } from 'react-icons/ai';
-import ChangeContent from './ChangeContent';
+import { BiLike,BiDislike } from 'react-icons/bi';
+import Update from './ChangeContent';
 
 const PostCard = ({post_id, user_id, content, likes, createdAt, handleLikes, handleDisLikes, handleDeletePost, allPosts}) => {
   createdAt = createdAt.split('-')
@@ -26,12 +26,12 @@ const PostCard = ({post_id, user_id, content, likes, createdAt, handleLikes, han
         <Box textAlign={'left'} mt={1} display={'flex'} justifyContent={'space-between'}>
 
           <Box display={'flex'} gap={'20px'}>
-            <FcLike size={25} cursor={'pointer'} onClick={()=>handleLikes(post_id)}/>
-            <FcDislike size={25} cursor={'pointer'} onClick={()=>handleDisLikes(post_id)}/>
+            <BiLike size={25} cursor={'pointer'} onClick={()=>handleLikes(post_id)}/>
+            <BiDislike size={25} cursor={'pointer'} onClick={()=>handleDisLikes(post_id)}/>
           </Box>
 
           <Box>
-            <ChangeContent post_id={post_id} allPosts={allPosts}/>
+            <Update post_id={post_id} allPosts={allPosts}/>
           </Box>
         </Box>
     </Box>

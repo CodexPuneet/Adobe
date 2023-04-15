@@ -17,7 +17,7 @@ function App() {
       <div className="App">
         <NavLink />
         {
-        !haveUser ? <AllPost/> : <HomeBgImg/>
+        haveUser ? <AllPost/> : <HomeBgImg/>
         }
       </div>
     </AccountContext.Provider>

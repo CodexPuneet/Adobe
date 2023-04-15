@@ -7,13 +7,13 @@ const Count = () => {
     const [countPosts, setCountPosts] = useState([]);
 
     async function getCountUser(){
-        await axios.get("https://adobemedia.onrender.com/analytics/users")
+        await axios.get("https://adobe-4gmw.onrender.com/analytics/users")
             .then((res)=>setCountUser(res.data.length))
             .catch((e)=>console.log(e));
     }
 
     async function getCountPost(){
-        await axios.get("https://adobemedia.onrender.com/analytics/posts")
+        await axios.get("https://adobe-4gmw.onrender.com/analytics/posts")
             .then((res)=>setCountPosts(res.data.length))
             .catch((e)=>console.log(e));
     }
